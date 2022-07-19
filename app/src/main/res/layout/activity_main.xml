@@ -1,66 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layoutCreateAccount"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
         android:orientation="vertical"
-        android:padding="@dimen/medium_dimens">
+        tools:context=".view.HomeActivity">
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/medium_dimens"
+            android:layout_marginTop="@dimen/medium_dimens"
+            android:gravity="center"
+            android:text="@string/create_account"
+            android:textSize="@dimen/medium_text_dimens" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/medium_dimens"
+            android:layout_marginTop="@dimen/large_dimens"
+            android:hint="@string/enter_character_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtCharacterName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnCreateAccountWithArcher"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/name"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/medium_dimens"
+            android:text="@string/create_account_with_archer" />
+
+        <Button
+            android:id="@+id/btnCreateAccountWithFighter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/medium_dimens"
+            android:text="@string/create_account_with_fighter" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutDisplayAccountInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_dimens"
+            android:gravity="center"
+            android:text="@string/account_information"
+            android:textSize="@dimen/medium_text_dimens" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/medium_dimens"
+            android:layout_marginTop="@dimen/large_dimens"
+            android:text="@string/account_name"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvName"
-            android:layout_width="wrap_content"
+            android:id="@+id/tvAccountName"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/medium_dimens"
             android:layout_marginTop="@dimen/below_small_dimens"
             android:textSize="@dimen/medium_text_dimens" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/medium_dimens"
-            android:text="@string/age"
+            android:layout_marginHorizontal="@dimen/medium_dimens"
+            android:layout_marginTop="@dimen/large_dimens"
+            android:text="@string/character"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvAge"
-            android:layout_width="wrap_content"
+            android:id="@+id/tvCharacter"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/medium_dimens"
             android:layout_marginTop="@dimen/below_small_dimens"
             android:textSize="@dimen/medium_text_dimens" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/medium_dimens"
-            android:text="@string/address"
+            android:layout_marginHorizontal="@dimen/medium_dimens"
+            android:layout_marginTop="@dimen/large_dimens"
+            android:text="@string/coin"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvAddress"
-            android:layout_width="wrap_content"
+            android:id="@+id/tvCoin"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/medium_dimens"
+            android:layout_marginTop="@dimen/below_small_dimens"
+            android:textSize="@dimen/medium_text_dimens" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/medium_dimens"
+            android:layout_marginTop="@dimen/large_dimens"
+            android:text="@string/exp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvExp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/medium_dimens"
             android:layout_marginTop="@dimen/below_small_dimens"
             android:textSize="@dimen/medium_text_dimens" />
 
         <Button
-            android:id="@+id/btnEdit"
-            android:layout_width="wrap_content"
+            android:id="@+id/btnFighting"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/medium_dimens"
             android:layout_marginTop="@dimen/medium_dimens"
-            android:text="@string/edit" />
+            android:text="@string/fighting_to_increment_exp_and_coin" />
+
+        <Button
+            android:layout_marginHorizontal="@dimen/medium_dimens"
+            android:layout_marginTop="@dimen/small_dimens"
+            android:id="@+id/btnPracticing"
+            android:text="@string/practicing_to_increment_attack_speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
 
     </LinearLayout>
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
-

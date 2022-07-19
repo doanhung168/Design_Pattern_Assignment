@@ -9,7 +9,7 @@
     <dimen name="above_extreme_dimens">48dp</dimen>
 
 
-    <dimen name="large_text_dimens">24sp</dimen>
-    <dimen name="medium_text_dimens">18sp</dimen>
+    <dimen name="large_text_dimens">32sp</dimen>
+    <dimen name="medium_text_dimens">24sp</dimen>
 
 </resources>
